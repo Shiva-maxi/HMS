@@ -11,7 +11,7 @@ export const sendMessage=catchAsyncError(async (req,res,next)=>{
     await Message.create({firstName,lastName,email,phoneNo,message});
 
 
-    return res.status(200).json({
+     res.status(200).json({
         success:true,
         message:"Message sent successfully"
     })

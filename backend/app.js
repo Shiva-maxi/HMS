@@ -7,11 +7,12 @@ import messageRouter from './router/messageRouter.js';
 import userRouter from './router/userRouter.js';
 import appointmentRouter from "./router/appointmentRouter.js";
 import { errorMiddleware } from "./middlewares/errorMiddleware.js";
+import 'dotenv/config'
 const app=express();
-
+// console.log(process.env.FRONTEND_URL);
 app.use(cors({
     origin:[process.env.FRONTEND_URL],
-    methods:["GET","POST","PUT"],
+    method:["GET","POST","PUT"],
     credentials:true
 }))
 
