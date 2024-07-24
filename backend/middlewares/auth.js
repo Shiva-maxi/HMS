@@ -6,7 +6,7 @@ import { User } from "../models/userSchema.js";
 export const isadminauthenticated=catchAsyncError(async (req,res,next)=>{
     const token=req.cookies.adminToken;
     if(!token){
-        return next(new ErrorHandler("Admin is not authenticated",400));
+        return next(new ErrorHandler("Dashboard User is not authenticated",400));
     }
 
 

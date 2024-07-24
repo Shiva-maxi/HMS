@@ -1,6 +1,8 @@
 import React, { createContext, useState } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
+import './App.css'
+import { Toaster } from "react-hot-toast";
 
 export const context = createContext({ isauthenticated: false });
 
@@ -18,6 +20,7 @@ const AppWrapper = () => {
 };
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <Toaster/>
     <AppWrapper />
   </React.StrictMode>
 );

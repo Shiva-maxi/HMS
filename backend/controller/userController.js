@@ -67,13 +67,13 @@ export const login = catchAsyncError(async (req, res, next) => {
 });
 
 export const addNewAdmin = catchAsyncError(async (req, res, next) => {
-  const { firstName, lastName, email, phone, nic, dob, gender, password } =
+  const { firstName, lastName, email, phoneNo, nic, dob, gender, password } =
     req.body;
   if (
     !firstName ||
     !lastName ||
     !email ||
-    !phone ||
+    !phoneNo ||
     !nic ||
     !dob ||
     !gender ||
@@ -91,7 +91,7 @@ export const addNewAdmin = catchAsyncError(async (req, res, next) => {
     firstName,
     lastName,
     email,
-    phone,
+    phoneNo,
     nic,
     dob,
     gender,
